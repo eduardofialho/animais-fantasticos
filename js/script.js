@@ -6,7 +6,7 @@ import Tooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMobileMenu from "./modules/mobile-menu.js";
 import initOpeningHours from "./modules/opening-hours.js";
-import initFetchAnimals from "./modules/fetch-animals.js";
+import fetchAnimals from "./modules/fetch-animals.js";
 import initScrollAnimation from "./modules/scroll-animation.js";
 
 const smoothScroll = new SmoothScroll('[data-menu="smooth"] a[href^="#"]');
@@ -34,5 +34,6 @@ tooltip.init();
 initDropdownMenu();
 initMobileMenu();
 initOpeningHours();
-initFetchAnimals();
 initScrollAnimation();
+
+fetchAnimals("../../animals-api.json", ".numbers-grid");
