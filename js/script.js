@@ -4,7 +4,7 @@ import TabNav from "./modules/tabnav.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
-import initMobileMenu from "./modules/mobile-menu.js";
+import MobileMenu from "./modules/mobile-menu.js";
 import initOpeningHours from "./modules/opening-hours.js";
 import fetchAnimals from "./modules/fetch-animals.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
@@ -38,7 +38,9 @@ scrollAnimation.init();
 const dropdownMenu = new DropdownMenu("[data-dropdown]");
 dropdownMenu.init();
 
-initMobileMenu();
+const mobileMenu = new MobileMenu('[data-menu="button"]', '[data-menu="list"]');
+mobileMenu.init();
+
 initOpeningHours();
 
 fetchAnimals("../../animals-api.json", ".numbers-grid");
